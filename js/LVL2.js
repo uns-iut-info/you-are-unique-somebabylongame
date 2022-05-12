@@ -29,7 +29,6 @@ class LVL2 extends LVLAbstract {
             {  if(!this.animate){
                 this.scene.activeCamera.position.x=this.player.mesh.position.x
                 this.scene.activeCamera.position.y=this.player.mesh.position.y
-                console.log("yes")
             }
             
                 this.animateCamera(false)

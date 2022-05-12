@@ -40,7 +40,6 @@ class LVLAbstract {
 
     animateCamera(tooltip){
         var diry = -1
-        console.log(this.scene.activeCamera.position.y-this.player.mesh.position.y)
         if(this.scene.activeCamera.position.y-this.player.mesh.position.y<0)
             diry = 1
         if(!this.cameraStopX)
@@ -342,8 +341,10 @@ class LVLAbstract {
         mesh.scaling.z = 5;
         mesh.scaling.y = 5;
         mesh.rotation = new BABYLON.Vector3(0, 0, 0);
+        this.scene.assets.playeranimations[2].play(true)
+        this.scene.assets.playeranimations[0].stop()
+        this.scene.assets.playeranimations[0].loopAnimation = false
 
-        this.scene.assets.playeranimations[3].play(true)
 
         this.player.animationGroups = this.scene.assets.playeranimations
         this.player.mesh = playerbox

@@ -152,13 +152,6 @@ class LVL1 extends LVLAbstract {
         return this.scene;
     }
 
-    contactEndLevel() {
-        if (Math.abs(this.endlvl.position.x - this.player.mesh.position.x) <= 10 && Math.abs(this.endlvl.position.y - this.player.mesh.position.y) <= 10) {
-            if (!this.gui.showinggui)
-                this.gui.createLevelClearScreen()
-        }
-    }
-
     createPickups() {
         var pickup = new Pickup(500,12, 2)
         pickup.createWalljump(this.scene)
@@ -313,13 +306,6 @@ class LVL1 extends LVLAbstract {
         obstt.push(obst)
 
         this.obstacles = obstt;
-    }
-
-    createGround() {
-        var ground = BABYLON.MeshBuilder.CreateBox("Ground", { depth: 100, width: 2500, height: 50 }, this.scene);
-        ground.position.y = -180;
-        ground.checkCollisions = true;
-        return ground;
     }
 
     createEndLevel() {

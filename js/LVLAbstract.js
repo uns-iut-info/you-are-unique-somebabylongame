@@ -20,6 +20,13 @@ class LVLAbstract {
         this.cameraStopX = false
     }
 
+    contactEndLevel() {
+        if (Math.abs(this.endlvl.position.x - this.player.mesh.position.x) <= 10 && Math.abs(this.endlvl.position.y - this.player.mesh.position.y) <= 10) {
+            if (!this.gui.showinggui)
+                this.gui.createLevelClearScreen()
+        }
+    }
+
     wavePickups() {
         for (let i = 0; i < this.pickups.length; i++) {
             this.pickups[i].move()
@@ -463,7 +470,7 @@ class LVLAbstract {
             "player task",
             "",
             "models/",
-            "character2.glb"
+            "character.glb"
         );
         meshTask.onSuccess = function (task) {
             instance.scene.assets.player = task.loadedMeshes[0]

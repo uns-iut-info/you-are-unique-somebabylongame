@@ -121,22 +121,27 @@ class LVLGUIController {
             switch (instance.lvl) {
                 case "lvl1":
                     //switch to lvl2
+                    document.getElementById("cyborg").style.display="none";
                     new LVL2(instance.gameconfig);
                     break
                 case "lvl2":
                     //switch to lvl3
+                    document.getElementById("cyborg").style.display="none";
                     new LVL3(instance.gameconfig);
                     break
                 case "lvl3":
                     //switch to lvl4
+                    document.getElementById("cyborg").style.display="none";
                     new LVL4(instance.gameconfig);
                     break
                 case "lvl4":
                     //switch to lvl5
+                    document.getElementById("cyborg").style.display="none";
                     new LVL5(instance.gameconfig);
                     break
                 case "lvl5":
                     //switch to lvl5
+                    document.getElementById("cyborg").style.display="none";
                     new EndCredits(instance.gameconfig);
                     break
             }

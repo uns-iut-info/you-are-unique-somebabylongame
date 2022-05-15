@@ -3,8 +3,6 @@ class Player extends Personnage {
         super(height, width, gameconfig.stats["hp"], speed)
         this.gameconfig = gameconfig
         this.swordmesh;
-
-        //variables d'état, à changer
         this.jumping = false;
         this.lookAt = 1;
         this.walljumpingleft = false;
@@ -30,6 +28,7 @@ class Player extends Personnage {
 
 
     move(followCamera, enemies) {
+        console.log(this.gameconfig.rollingAverage.average)
 
         let idle = true;
         if (!this.jumping) {

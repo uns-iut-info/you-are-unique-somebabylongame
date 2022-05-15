@@ -32,7 +32,8 @@ class LVL5 extends LVLAbstract {
                 this.scene.activeCamera.position.y=this.player.mesh.position.y
             }
         
-            this.animateCamera(false)
+            this.animateCamera(true,"images/LVL5/GeneratorTooltip.png","150px")
+            
         }
         else{
         if (this.player.hp > 0)

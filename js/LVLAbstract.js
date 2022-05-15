@@ -45,7 +45,7 @@ class LVLAbstract {
             this.enemies[i].move()
     }
 
-    animateCamera(tooltip){
+    animateCamera(tooltip,tooltiplink="",heigth="200px",width = "400px"){
         var diry = -1
         if(this.scene.activeCamera.position.y-this.player.mesh.position.y<0)
             diry = 1
@@ -62,7 +62,7 @@ class LVLAbstract {
             this.scene.activeCamera = this.createFollowCamera(200)
             this.cameraAnimation = false
             if(tooltip)
-                this.gui.createTooltip("images/LVL1/ControlsTooltip.png", "400px", "200px");
+                this.gui.createTooltip(tooltiplink, width, heigth);
             }
         }
     }

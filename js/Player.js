@@ -28,8 +28,6 @@ class Player extends Personnage {
 
 
     move(followCamera, enemies) {
-        console.log(this.gameconfig.rollingAverage.average)
-
         let idle = true;
         if (!this.jumping) {
             this.mesh.position.y = this.mesh.position.y - 2.2

@@ -319,7 +319,6 @@ class LVL5 extends LVLAbstract {
         this.boss = this.scene.assets.boss;
         this.scene.assets.bossanimation[0].stop()
         this.scene.assets.bossanimation[5].play(true)
-        console.log(this.scene.assets.bossanimation)
 
         this.boss.scaling.x = 120
         this.boss.scaling.y = 120
